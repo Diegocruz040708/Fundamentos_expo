@@ -14,6 +14,11 @@ export default function Butones() {
             <Ionicons name="person" size={20} style={style.IconB} />
             <Text style={style.text}>Botón Icono</Text>
         </TouchableOpacity>
+        {/* Botón 3 */}
+        <TouchableOpacity style={style.botonIcono}>
+            <Text style={style.text}>Siguiente</Text>
+            <Ionicons name="home" size={20} style={style.IconB} />
+        </TouchableOpacity>
     </View>
   );
 }
