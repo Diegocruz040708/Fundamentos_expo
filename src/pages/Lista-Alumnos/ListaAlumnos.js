@@ -14,21 +14,37 @@ export default function ListaAlumnos() {
             {/* Inicio de Contenido (Lista de alumnos)*/}
             <ScrollView style={{ padding: 16 }}>
                 <Text style={style.sectionTitle}>Alumnos de Aplicaciones Moviles</Text>
-                {[1,2,3,4,5,6,7].map(() =>(
+                {[1, 2, 3, 4, 5, 6, 7].map(() => (
                     <View style={style.card}>
-                    <Image style={style.avatar} source={{ uri: 'https://img.freepik.com/psd-gratis/ilustracion-3d-avatar-o-perfil-humano_23-2150671116.jpg' }} />
-                    <View style={style.cardInfo}>
-                        <Text style={style.username}>Diego Cruz</Text>
-                        <Text style={style.userDetails}>Ingeniería en Sistemas Computacionales</Text>
-                        <TouchableOpacity style={style.saveButton}>
-                            <Text style={style.saveButtonText}>Ver más</Text>
-                        </TouchableOpacity>
+                        <Image style={style.avatar} source={{ uri: 'https://img.freepik.com/psd-gratis/ilustracion-3d-avatar-o-perfil-humano_23-2150671116.jpg' }} />
+                        <View style={style.cardInfo}>
+                            <Text style={style.username}>Diego Cruz</Text>
+                            <Text style={style.userDetails}>Ingeniería en Sistemas Computacionales</Text>
+                            <TouchableOpacity style={style.saveButton}>
+                                <Text style={style.saveButtonText}>Ver más</Text>
+                            </TouchableOpacity>
+                        </View>
                     </View>
-                </View>
                 ))}
-                
             </ScrollView>
+
             {/* Fin de Contenido (Lista de alumnos)*/}
+            {/* navbar */}
+            <View style={style.navBar}>
+                <View style={style.navItem}>
+                    <Ionicons name="home" size={20} color={'#000'} />
+                    <Text style={style.navtext}>Inicio</Text>
+                </View>
+                <View style={style.navItem}>
+                    <Ionicons name="save" size={20} color={'#000'} />
+                    <Text style={style.navtext}>Guardar</Text>
+                </View>
+                <View style={style.navItem}>
+                    <Ionicons name="person" size={20} color={'#000'} />
+                    <Text style={style.navtext}>Perfil</Text>
+                </View>
+            </View>
+            {/* fin navbar */}
 
         </SafeAreaView>
     );
@@ -100,5 +116,21 @@ const style = StyleSheet.create({
         color: '#fff',
         fontWeight: 'bold',
     },
-
+    navBar: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        height: 70,
+        backgroundColor: '#e88aff',
+        borderTopWidth: 1,
+        //marginBottom: 10,
+    },
+    navItem: {
+        alignItems: 'center',
+    },
+    navtext: {
+        fontSize: 12,
+        color: '#000',
+        marginTop: 4,
+    },
 });
