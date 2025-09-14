@@ -2,6 +2,7 @@ import { Text, View, StyleSheet, Platform, StatusBar, TouchableOpacity } from 'r
 import { Ionicons } from '@expo/vector-icons';
 import CardBasico from '../components/CardBasico';
 import Cardimg from '../components/Cardimg';
+import CardV2 from '../components/CardV2';
 
 export default function HomePrincipal() {
   return (
@@ -9,6 +10,7 @@ export default function HomePrincipal() {
         <Text style={style.title} >Pagina Principal</Text>
         <CardBasico />
         <Cardimg />
+        <CardV2/>
     </View>
   );
 }
