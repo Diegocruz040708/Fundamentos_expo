@@ -14,7 +14,8 @@ export default function ListaAlumnos() {
             {/* Inicio de Contenido (Lista de alumnos)*/}
             <ScrollView style={{ padding: 16 }}>
                 <Text style={style.sectionTitle}>Alumnos de Aplicaciones Moviles</Text>
-                <View style={style.card}>
+                {[1,2,3,4,5,6,7].map(() =>(
+                    <View style={style.card}>
                     <Image style={style.avatar} source={{ uri: 'https://img.freepik.com/psd-gratis/ilustracion-3d-avatar-o-perfil-humano_23-2150671116.jpg' }} />
                     <View style={style.cardInfo}>
                         <Text style={style.username}>Diego Cruz</Text>
@@ -24,6 +25,8 @@ export default function ListaAlumnos() {
                         </TouchableOpacity>
                     </View>
                 </View>
+                ))}
+                
             </ScrollView>
             {/* Fin de Contenido (Lista de alumnos)*/}
 
