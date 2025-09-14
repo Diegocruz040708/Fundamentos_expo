@@ -1,7 +1,7 @@
 import { StyleSheet, Text, SafeAreaView, StatusBar, Platform, TextInput, TouchableOpacity, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
-export default function HomePrincipal() {
+export default function Formulario() {
     return (
         <ScrollView>
             <SafeAreaView style={style.mainS}>
